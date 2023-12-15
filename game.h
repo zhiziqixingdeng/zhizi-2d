@@ -23,7 +23,7 @@ void move(int dy1,int dy2){
 	x+=dy1;
 	y+=dy2;
 }
-bool check(char ch,long long int a){
+char check(char ch,long long int a){
 	while(a--){
 		if(kbhit()){
 		ch=getch();
@@ -32,6 +32,7 @@ bool check(char ch,long long int a){
 		ch='\0';
 	}
 	}
+	return ch;
 }
 string chrand(int n){
 	string cnt;
