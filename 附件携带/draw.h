@@ -9,16 +9,16 @@ void to(int x,int y,char c){
 }
 void fill(int x,int y,char c,char d){
 	pad[x][y]=c;
-	if(pad[x+1][y]!=d){
+	if(pad[x+1][y]!=d&&pad[x+1][y]!=c){
 		fill(x+1,y,c,d);
 	}
-	if(pad[x-1][y]!=d){
+	if(pad[x-1][y]!=d&&pad[x-1][y]!=c){
 		fill(x-1,y,c,d);
 	}
-	if(pad[x][y-1]!=d){
+	if(pad[x][y-1]!=d&&pad[x][y-1]!=c){
 		fill(x,y-1,c,d);
 	}
-	if(pad[x][y+1]!=d){
+	if(pad[x][y+1]!=d&&pad[x][y+1]!=c){
 		fill(x,y+1,c,d);
 	}
 	return;
